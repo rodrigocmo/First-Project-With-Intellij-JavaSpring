@@ -17,6 +17,11 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+*.xml
+*.jar
+*.pb
+*.idea/sonarlint
+
 # Gradle:
 .idea/gradle.xml
 .idea/libraries

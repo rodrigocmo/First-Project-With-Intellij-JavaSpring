@@ -17,8 +17,6 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
-*.idea
-
 *.xml
 *.jar
 *.pb

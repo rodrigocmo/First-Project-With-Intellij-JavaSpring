@@ -17,7 +17,7 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
-*.idea/SonarLint
+*.idea
 
 *.xml
 *.jar

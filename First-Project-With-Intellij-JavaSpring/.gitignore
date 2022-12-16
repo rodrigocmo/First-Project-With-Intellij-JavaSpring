@@ -8,6 +8,9 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+*.idea\sonarlint
+*.idea/sonarlint
+*.idea
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
@@ -20,7 +23,7 @@
 *.xml
 *.jar
 *.pb
-*.idea/sonarlint
+
 
 # Gradle:
 .idea/gradle.xml

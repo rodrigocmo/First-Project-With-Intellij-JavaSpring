@@ -11,6 +11,7 @@ public class MathController {
     @RequestMapping(value="/sum/{numberOne}/{numberTwo}", method= RequestMethod.GET)
     public Double sum(@PathVariable("numberOne") String numberOne,
                       @PathVariable("numberTwo") String numberTwo) {
+
         return 1d;
     }
 }

@@ -71,6 +71,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.0-RC4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.springframework.boot:spring-boot-devtools:3.0.0-RC2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.0.0-RC2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.12.0" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.24" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:3.0.0-RC2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:3.0.0-RC2" level="project" />

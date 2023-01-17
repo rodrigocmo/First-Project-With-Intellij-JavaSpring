@@ -1,4 +1,4 @@
-package logic.service.exceptions;
+package br.com.rodrigocmo.config.logic.service.exceptions;
 
 import java.io.Serializable;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package logic.service.converters;
+package br.com.rodrigocmo.config.logic.service.converters;
 
 public class NumberConverter {
 	

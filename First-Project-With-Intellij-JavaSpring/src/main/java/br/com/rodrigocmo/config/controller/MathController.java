@@ -1,12 +1,12 @@
-package controller;
+package br.com.rodrigocmo.config.controller;
 
+import br.com.rodrigocmo.config.logic.service.converters.NumberConverter;
+import br.com.rodrigocmo.config.logic.service.exceptions.UnsupportedMathOperationException;
+import br.com.rodrigocmo.config.logic.service.math.SimpleMath;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import logic.service.converters.NumberConverter;
-import logic.service.exceptions.UnsupportedMathOperationException;
-import logic.service.math.SimpleMath;
 
 import java.util.concurrent.atomic.AtomicLong;
 

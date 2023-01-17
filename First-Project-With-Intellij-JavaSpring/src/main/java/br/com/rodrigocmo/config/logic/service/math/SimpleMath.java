@@ -1,4 +1,4 @@
-package logic.service.math;
+package br.com.rodrigocmo.config.logic.service.math;
 
 public class SimpleMath {
 

@@ -1,4 +1,4 @@
-package logic.service.exceptions;
+package br.com.rodrigocmo.config.logic.service.exceptions;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

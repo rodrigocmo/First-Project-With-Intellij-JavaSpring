@@ -1,11 +1,14 @@
 package br.com.rodrigocmo.config.logic.service.person;
 
 import br.com.rodrigocmo.config.db.Person;
+import br.com.rodrigocmo.config.db.PersonDTO;
 import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 @Service
@@ -37,5 +40,10 @@ public class PersonWriteService {
         entity.setGender(person.getGender());
 
         return personRepository.save(person);
+    }
+
+    public ResponseEntity<List<Person>> createMany(PersonDTO manyPerson){
+       return ResponseEntity.ok(personRepository.saveAll(manyPerson.getPersonList()));
+
     }
 }

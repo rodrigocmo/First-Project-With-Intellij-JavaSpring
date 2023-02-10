@@ -2,6 +2,7 @@ package br.com.rodrigocmo.config.db;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 
@@ -14,7 +15,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "tb_person")
-public class Person implements Serializable {
+public class Person  extends RepresentationModel<Person> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id

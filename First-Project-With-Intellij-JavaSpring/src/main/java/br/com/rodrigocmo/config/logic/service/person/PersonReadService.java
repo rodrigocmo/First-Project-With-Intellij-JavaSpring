@@ -1,9 +1,11 @@
 package br.com.rodrigocmo.config.logic.service.person;
 
-import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
+import br.com.rodrigocmo.config.controller.PersonController;
 import br.com.rodrigocmo.config.db.Person;
+import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -28,8 +30,11 @@ public class PersonReadService {
 
         logger.info("Finding one person!");
 
-        return personRepository.findById(id)
+        Person before = personRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
+
+        before.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class).findById(id)).withSelfRel());
+        return before;
     }
 
     public Person create(Person person) {

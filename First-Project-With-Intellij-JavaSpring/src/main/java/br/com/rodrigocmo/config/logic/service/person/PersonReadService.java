@@ -3,10 +3,12 @@ package br.com.rodrigocmo.config.logic.service.person;
 import br.com.rodrigocmo.config.controller.PersonController;
 import br.com.rodrigocmo.config.db.Person;
 import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
+import br.com.rodrigocmo.config.logic.service.exceptions.RequiredObjectIsNullException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -35,10 +37,12 @@ public class PersonReadService {
 
         before.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class).findById(id)).withSelfRel());
         return before;
+
     }
 
     public Person create(Person person) {
 
+        if(ObjectUtils.isEmpty(person)) throw new RequiredObjectIsNullException();
         logger.info("Creating one person!");
 
         return personRepository.save(person);
@@ -46,6 +50,7 @@ public class PersonReadService {
 
     public Person update(Person person) {
 
+        if(ObjectUtils.isEmpty(person)) throw new RequiredObjectIsNullException();
         logger.info("Updating one person!");
 
         Person entity = personRepository.findById(person.getId())
@@ -67,4 +72,5 @@ public class PersonReadService {
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this ID!"));
         personRepository.delete(entity);
     }
+
 }

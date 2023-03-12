@@ -13,7 +13,7 @@ public class OpenAPIConfigTest extends AbstractIntegrationTest {
 	public void shouldDisplaySwaggerUiPage() {
 		var content =
 			given()
-				.basePath("/swagger-ui/index.html")
+				.basePath("java/swagger-ui/index.html")
 				.port(TestConfigs.SERVER_PORT)
 				.when()
 					.get()

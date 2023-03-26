@@ -14,10 +14,12 @@
     <name>First-Project-With-Intellij-JavaSpring</name>
     <description>First-Project-With-Intellij-JavaSpring</description>
     <properties>
-        <springdoc.version>2.0.2</springdoc.version>
-        <java.version>17</java.version>
-        <testcontainers.version>1.16.3</testcontainers.version>
-        <rest-assured.version>4.5.0</rest-assured.version>
+    <java.version>17</java.version>
+    <dozer.version>6.4.0</dozer.version>
+    <springdoc.version>2.0.2</springdoc.version>
+    <testcontainers.version>1.16.3</testcontainers.version>
+    <rest-assured.version>4.5.0</rest-assured.version>
+    <java-jwt.version>3.18.3</java-jwt.version>
     </properties>
     <dependencies>
 
@@ -30,6 +32,15 @@
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>${springdoc.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>${java-jwt.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

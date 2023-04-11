@@ -1,4 +1,4 @@
-package br.com.rodrigocmo.config.cansei;
+package br.com.rodrigocmo.config.logic.auth;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

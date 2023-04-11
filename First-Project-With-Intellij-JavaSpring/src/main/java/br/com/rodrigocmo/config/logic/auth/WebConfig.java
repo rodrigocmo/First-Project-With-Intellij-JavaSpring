@@ -1,4 +1,4 @@
-package br.com.rodrigocmo.config.cansei;
+package br.com.rodrigocmo.config.logic.auth;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

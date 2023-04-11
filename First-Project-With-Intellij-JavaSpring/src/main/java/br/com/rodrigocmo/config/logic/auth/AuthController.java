@@ -1,4 +1,4 @@
-package br.com.rodrigocmo.config.cansei;
+package br.com.rodrigocmo.config.logic.auth;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

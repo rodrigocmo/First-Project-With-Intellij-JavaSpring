@@ -5,12 +5,13 @@ import br.com.rodrigocmo.config.db.Person;
 import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
 import br.com.rodrigocmo.config.logic.service.exceptions.RequiredObjectIsNullException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.rest.webmvc.ResourceNotFoundException;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
-import java.util.List;
 import java.util.logging.Logger;
 
 @Service
@@ -21,11 +22,13 @@ public class PersonReadService {
     @Autowired
     PersonReadRepository personRepository;
 
-    public List<Person> findAll() {
+    public Page<Person> findAll(Pageable pageable) {
 
         logger.info("Finding all people!");
 
-        return personRepository.findAll();
+        Page<Person> pagePerson = personRepository.findAll(pageable);
+        pagePerson.map(p-> p.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class).findById(p.getId())).withSelfRel()));
+        return pagePerson;
     }
 
     public Person findById(Long id) {

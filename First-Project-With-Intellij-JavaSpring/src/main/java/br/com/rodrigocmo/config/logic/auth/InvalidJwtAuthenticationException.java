@@ -1,4 +1,4 @@
-package br.com.rodrigocmo.config.cansei;
+package br.com.rodrigocmo.config.logic.auth;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.AuthenticationException;

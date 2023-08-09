@@ -8,15 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="First-Project-With-Intellij-JavaSpring" />
+        <module name="delivery-config-server" />
+        <module name="delivery-eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="delivery-config-server" target="17" />
+      <module name="delivery-eureka-server" target="17" />
       <module name="First-Project-With-Intellij-JavaSpring" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="First-Project-With-Intellij-JavaSpring" options="-parameters" />
+      <module name="delivery-config-server" options="-parameters" />
+      <module name="delivery-eureka-server" options="-parameters" />
     </option>
   </component>
 </project>

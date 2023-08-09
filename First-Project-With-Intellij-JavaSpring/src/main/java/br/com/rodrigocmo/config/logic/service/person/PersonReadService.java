@@ -3,7 +3,7 @@ package br.com.rodrigocmo.config.logic.service.person;
 import br.com.rodrigocmo.config.controller.PersonController;
 import br.com.rodrigocmo.config.db.Person;
 import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
-import br.com.rodrigocmo.config.logic.service.exceptions.RequiredObjectIsNullException;
+import br.com.rodrigocmo.config.logic.exceptions.RequiredObjectIsNullException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

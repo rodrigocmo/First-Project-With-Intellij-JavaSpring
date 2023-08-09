@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/First-Project-With-Intellij-JavaSpring/First-Project-With-Intellij-JavaSpring.iml" filepath="$PROJECT_DIR$/First-Project-With-Intellij-JavaSpring/First-Project-With-Intellij-JavaSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../delivery-config-server/delivery-config-server.iml" filepath="$PROJECT_DIR$/../delivery-config-server/delivery-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../delivery-eureka-server/delivery-eureka-server.iml" filepath="$PROJECT_DIR$/../delivery-eureka-server/delivery-eureka-server.iml" />
     </modules>
   </component>
 </project>

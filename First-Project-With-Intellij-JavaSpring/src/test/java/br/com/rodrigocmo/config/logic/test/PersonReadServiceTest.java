@@ -3,7 +3,7 @@ package br.com.rodrigocmo.config.logic.test;
 import br.com.rodrigocmo.config.db.MockPerson;
 import br.com.rodrigocmo.config.db.Person;
 import br.com.rodrigocmo.config.logic.repository.PersonReadRepository;
-import br.com.rodrigocmo.config.logic.service.exceptions.RequiredObjectIsNullException;
+import br.com.rodrigocmo.config.logic.exceptions.RequiredObjectIsNullException;
 import br.com.rodrigocmo.config.logic.service.person.PersonReadService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
